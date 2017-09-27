@@ -1,0 +1,31 @@
+.data 
+     A1: 10 
+     A2: 1
+     A3: .space 3
+     A4: 2 
+.code 
+       	ldi 6 A1
+	ld  5 5 
+       	ldi 7 A4 		   
+       	ld  4 7
+lp1	add 4 5 6
+	sub 0 4 5
+	and 1 0 5
+	or 2 1 4
+	ldi 3 A2
+	xor 1 3 4
+	mov 0 2
+	not 3 4
+	inc 1
+	dec 1
+	st 2 3
+	call loop2
+	pop 5
+	push 7
+	jmp loop
+	add 4 5 6
+loop	add 5 5 5
+	jz lp1
+loop2	inc 0
+	dec 0
+	ret
